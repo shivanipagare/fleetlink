@@ -8,7 +8,7 @@ function BookingConfirmation({ booking, onCancel }) {
     try {
       await cancelBooking(booking._id);
       alert("Booking cancelled ");
-      onCancel(); // reset parent state
+      onCancel();
     } catch (err) {
       alert(err.response?.data?.error || "Cancel failed");
     }

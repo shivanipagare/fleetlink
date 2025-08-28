@@ -1,6 +1,6 @@
 import request from "supertest";
 import mongoose from "mongoose";
-import app from "../src/app.js";  // ✅ NOT server.js
+import app from "../src/app.js";  
 import Vehicle from "../src/models/vehicle.js";
 
 beforeAll(async () => {
@@ -9,7 +9,6 @@ beforeAll(async () => {
 });
 
 afterEach(async () => {
-  // clean test data after each test
   await Vehicle.deleteMany();
 });
 
